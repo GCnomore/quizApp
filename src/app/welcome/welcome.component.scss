@@ -1,0 +1,31 @@
+.mat-card,
+.quiz-card {
+  width: fit-content;
+  text-align: center;
+  margin: 30px;
+  padding: 5%;
+}
+
+.welcome {
+  text-align: center;
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-container {
+  display: flex;
+  justify-content: center;
+}
+
+.quiz-content {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 50px;
+}

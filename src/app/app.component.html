@@ -1,31 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="quiz" *ngIf="quiz">
-      <div class="questions" *ngIf="!showResults">
-        <app-question-form
-          [question]="quiz.questions[currentQuestionIndex]"
-          (onChoiceMade)="updateChoice($event)"
-        >
-        </app-question-form>
+<div class="quiz" *ngIf="quiz">
+  <div class="questions" *ngIf="!showResults">
+    <app-question-form
+      [question]="quiz.questions[currentQuestionIndex]"
+      (onChoiceMade)="updateChoice($event)"
+    >
+    </app-question-form>
 
-        <button
-          class="btn btn-success"
-          (click)="nextOrViewResults()"
-          [disabled]="!answers.values[currentQuestionIndex]"
-        >
-          {{
-            currentQuestionIndex === quiz.questions.length - 1
-              ? "View results"
-              : "Next"
-          }}
-        </button>
-      </div>
-    </div>
-  </body>
-</html>
+    <button
+      class="btn btn-success"
+      (click)="nextOrViewResults()"
+      [disabled]="!answers.values[currentQuestionIndex]"
+    >
+      {{
+        currentQuestionIndex === quiz.questions.length - 1
+          ? "View results"
+          : "Next"
+      }}
+    </button>
+  </div>
+</div>
